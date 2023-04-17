@@ -1,11 +1,13 @@
-import React from 'react';
+import { type FC } from "react"
+import { Container } from "./components"
+import Content from "./components/Content"
 
-function App() {
-  return (
-    <div>
-      Привет
-    </div>
-  );
+const App: FC = () => {
+    return (
+        <Container>
+            <Content />
+        </Container>
+    )
 }
 
-export default App;
+export default App
