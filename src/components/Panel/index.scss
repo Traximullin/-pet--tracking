@@ -1,0 +1,23 @@
+
+.panel {
+    grid-area: a;
+    border-radius: 16;
+    background-color: var(--colors-ui-base);
+    border-radius: 16px;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-rows: 1fr min-content;
+
+    &__information {
+        padding: 2rem;
+        border-radius: 0 0 16px 16px;
+        background-color: var(--colors-ui-ligth);
+    }
+
+    &__control {
+        padding: 2rem;
+        height: 40px;
+    }
+
+}

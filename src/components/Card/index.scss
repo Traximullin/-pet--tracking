@@ -2,5 +2,20 @@
 .card { 
     width: 100%;
     height: 100%;
-    background-color: red;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    background-color: #56c2e6;
+    border-radius: 16px;
+    overflow: hidden;
+    
+    &__header {
+        height: 40px;
+    }
+
+    &__content {
+        padding: 2rem;
+        border-radius: 16px 16px 0 0;
+        height: 100%;
+        background-color: var(--colors-ui-base);
+    }
 }

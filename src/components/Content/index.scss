@@ -1,6 +1,7 @@
 
 .content {
     display: grid;
+    padding: 0 2rem;
     max-width: 1200px;
     width: 100%;
     grid-template-columns: repeat(4, 1fr);
@@ -11,4 +12,14 @@
         "a"
         "a"
     ;
+
+    @media (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+        
+        grid-template-areas: none;
+        grid-template-rows: none;
+        grid-template-columns: none;
+    }
+
 }
