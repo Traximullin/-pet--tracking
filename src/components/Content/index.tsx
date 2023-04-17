@@ -1,13 +1,12 @@
 import { type FC } from "react"
 import "./index.scss"
 import Card from "../Card"
+import Panel from "../Panel"
 
 const Content: FC = () => {
     return (
         <div className="content">
-            <div style={{ gridArea: "a", background: "red", }}>
-                123
-            </div>
+            <Panel />
             <Card/>
             <Card/>
             <Card/>

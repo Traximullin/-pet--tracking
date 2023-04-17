@@ -4,7 +4,10 @@ import "./index.scss"
 const Card: FC = () => {
     return (
         <article className="card">
-            123
+            <div className="card__header"/>
+            <div className="card__content">
+                13
+            </div>
         </article>
     )
 }
