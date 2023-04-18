@@ -1,6 +1,7 @@
 
 .card { 
     width: 100%;
+    cursor: pointer;
     height: 100%;
     display: grid;
     grid-template-rows: min-content 1fr;
@@ -12,10 +13,68 @@
         height: 40px;
     }
 
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        p {
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+    }
+
+    &__title {
+        font-size: 2em;
+    }
+
+    &__sub-title {
+        color: #A8ABDC;
+        font-size: 0.9em;
+    }
+
+    &__information {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    &__dots {
+        position: relative;
+        &, &::before, &::after {
+            background-color: #A8ABDC;
+            border-radius: 50%;
+            width: 4px;
+            height: 4px;
+        }
+        &::before, &::after {
+            top: 0;
+            content: "";
+            position: absolute;
+        }
+        &::before {
+            right: 8px;
+        }
+        &::after {
+            left: 8px;
+        }
+    }
+
     &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         padding: 2rem;
         border-radius: 16px 16px 0 0;
         height: 100%;
         background-color: var(--colors-ui-base);
+    }
+
+    @media (max-width: 767px) {
+        .card__information {
+            margin-top: 1rem;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
     }
 }
