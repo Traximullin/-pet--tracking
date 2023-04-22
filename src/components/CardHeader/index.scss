@@ -1,0 +1,62 @@
+
+.card-header {
+    width: 100%;
+    height: 40px;
+    background-color: red;
+    position: relative;
+    overflow: hidden;
+    
+    &__icon {
+        position: absolute;
+        top: -8px;
+        right: 2rem;
+        width: 64px;
+        height: 64px;
+        transform: rotate(45deg);
+    }
+
+    &_type {
+        &_work {
+            background-color: #ff8b64;
+            .card-header__icon {
+                filter: brightness(0) saturate(100%) invert(51%) sepia(55%) 
+                        saturate(636%) hue-rotate(328deg) brightness(90%) contrast(89%);
+            }
+        }
+        &_play {
+            background-color: #56c2e6;
+            .card-header__icon {
+                filter: brightness(0) saturate(100%) invert(57%) sepia(9%) 
+                        saturate(3436%) hue-rotate(149deg) brightness(95%) contrast(73%);
+            }
+        }
+        &_styde {
+            background-color: #ff5e7d;
+            .card-header__icon {
+                filter: brightness(0) saturate(100%) invert(37%) sepia(37%)
+                        saturate(1761%) hue-rotate(308deg) brightness(100%) contrast(103%);
+            }
+        }
+        &_exercise {
+            background-color: #4bcf83;
+            .card-header__icon {
+                filter: brightness(0) saturate(100%) invert(56%) sepia(80%)
+                        saturate(391%) hue-rotate(93deg) brightness(89%) contrast(97%);
+            }
+        }
+        &_social {
+            background-color: #7235d1;
+            .card-header__icon {
+                filter: brightness(0) saturate(100%) invert(13%) sepia(93%)
+                        saturate(5212%) hue-rotate(265deg) brightness(74%) contrast(97%);
+            }
+        }
+        &_self-care {
+            background-color: #f0c65b;
+            .card-header__icon {
+                filter: brightness(0) saturate(100%) invert(84%) sepia(12%)
+                        saturate(4344%) hue-rotate(334deg) brightness(93%) contrast(91%);
+            }
+        }
+    }
+}

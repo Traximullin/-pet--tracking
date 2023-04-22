@@ -1,1 +1,7 @@
 export { default as closeSvg } from "./close.svg"
+export { default as workSvg } from "./work.svg"
+export { default as playSvg } from "./play.svg"
+export { default as stydeSvg } from "./book.svg"
+export { default as exerciseSvg } from "./exercise.svg"
+export { default as socialSvg } from "./social.svg"
+export { default as selfCareSvg } from "./self-care.svg"

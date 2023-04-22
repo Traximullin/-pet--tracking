@@ -7,12 +7,12 @@ const Content: FC = () => {
     return (
         <div className="content">
             <Panel />
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
+            <Card type="work" />
+            <Card type="play" />
+            <Card type="styde" />
+            <Card type="exercise" />
+            <Card type="social" />
+            <Card type="self-care" />
         </div>
     )
 }
