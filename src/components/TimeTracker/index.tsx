@@ -6,6 +6,10 @@ const TimeTracker: FC = () => {
         <input
             className="time-tracker"
             type="number"
+            max={12}
+            min={1}
+            value={4}
+            disabled
         />
     )
 }
