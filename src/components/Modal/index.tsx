@@ -4,7 +4,7 @@ import { type IModal } from "./interface"
 import { closeSvg } from "../../assets/svg"
 
 const Modal: FC<IModal> = (props) => {
-    const { active, setActive, } = props
+    const { children, active, setActive, ...otherProps } = props
 
     const currentClasses = ["modal"]
 
@@ -21,6 +21,7 @@ const Modal: FC<IModal> = (props) => {
             className={currentClasses.join(" ")}
             onClick={handleCloseClick}
             tabIndex={-1}
+            {...otherProps}
         >
             <div
                 className="modal__content"
@@ -32,7 +33,7 @@ const Modal: FC<IModal> = (props) => {
                 >
                     <img src={closeSvg}/>
                 </span>
-                {String(active)}
+                {children}
             </div>
         </div>
     )
