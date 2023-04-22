@@ -1,10 +1,14 @@
 import { type FC } from "react"
+import CardHeader from "../CardHeader"
 import "./index.scss"
+import { type ICard } from "./interface"
 
-const Card: FC = () => {
+const Card: FC<ICard> = (props) => {
+    const { type, ...othersProps } = props
+
     return (
-        <article className="card">
-            <div className="card__header"/>
+        <article className="card" {...othersProps}>
+            <CardHeader type={type} />
             <div className="card__content">
                 <div className="card__heading">
                     <p>Work</p>
