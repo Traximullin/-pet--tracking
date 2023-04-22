@@ -1,0 +1,21 @@
+.time-tracker {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    font-size: 4em;
+    text-align: center;
+    background-color: #5746ea;
+    color: #ffffff;
+    
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    &[type="number"] {
+        -moz-appearance: textfield;
+    }
+}
+
+
