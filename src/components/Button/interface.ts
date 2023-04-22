@@ -1,5 +1,7 @@
 import { type ButtonHTMLAttributes } from "react"
 
-export interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
+type TButtonSize = "big" | "small"
 
+export interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
+    size?: TButtonSize
 }

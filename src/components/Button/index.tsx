@@ -3,10 +3,16 @@ import "./index.scss"
 import { type IButton } from "./interface"
 
 const Button: FC<IButton> = (props) => {
-    const { children, ...othersProps } = props
+    const { children, size, ...othersProps } = props
+
+    const currentClasses = ["button"]
+
+    if (size) {
+        currentClasses.push("button_size_".concat(size))
+    }
 
     return (
-        <button className="button" {...othersProps}>
+        <button className={currentClasses.join(" ")} {...othersProps}>
             {children}
         </button>
     )
