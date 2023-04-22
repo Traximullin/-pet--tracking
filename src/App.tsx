@@ -1,6 +1,5 @@
 import { useState, type FC } from "react"
-import { Button, Container, Modal, TimeTracker } from "./components"
-import Content from "./components/Content"
+import { Container, Content, Modal, Tracker } from "./components"
 
 const App: FC = () => {
     const [state, setState] = useState(false)
@@ -9,8 +8,7 @@ const App: FC = () => {
         <Container>
             <button onClick={() => { setState(prev => !prev) }}>RSDASD</button>
             <Modal active={state} setActive={setState}>
-                <TimeTracker/>
-                <Button>Привет</Button>
+                <Tracker />
             </Modal>
             <Content />
         </Container>

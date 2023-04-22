@@ -1,15 +1,16 @@
 import { type FC } from "react"
 import "./index.scss"
+import { type ITimeTracker } from "./interface"
 
-const TimeTracker: FC = () => {
+const TimeTracker: FC<ITimeTracker> = (props) => {
+    const { ...othersProps } = props
+
     return (
         <input
             className="time-tracker"
             type="number"
-            max={12}
-            min={1}
-            value={4}
             disabled
+            {...othersProps}
         />
     )
 }
