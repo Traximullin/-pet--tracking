@@ -21,13 +21,15 @@ const Modal: FC<IModal> = (props) => {
             className={currentClasses.join(" ")}
             onClick={handleCloseClick}
             tabIndex={-1}
-            onKeyDown={(e) => { e.key === "Escape" && setActive(false) }}
         >
             <div
                 className="modal__content"
                 onClick={(e) => { e.stopPropagation() }} //! закрытие не работало на саму модалку
             >
-                <span className="modal__close" >
+                <span
+                    className="modal__close"
+                    onClick={handleCloseClick}
+                >
                     <img src={closeSvg}/>
                 </span>
                 {String(active)}
