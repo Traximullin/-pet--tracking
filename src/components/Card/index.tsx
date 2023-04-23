@@ -11,7 +11,7 @@ const Card: FC<ICard> = (props) => {
             <CardHeader type={type} />
             <div className="card__content">
                 <div className="card__heading">
-                    <p>Work</p>
+                    <p className="card__type">{type}</p>
                     <div className="card__dots"/>
                 </div>
                 <div className="card__information">
