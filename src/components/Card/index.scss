@@ -18,6 +18,10 @@
         }
     }
 
+    &__type {
+        text-transform: capitalize;
+    }
+    
     &__title {
         font-size: 2em;
     }
