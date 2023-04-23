@@ -1,13 +1,20 @@
 import { useState, type FC } from "react"
 import { Container, Content, Modal, Tracker } from "./components"
+import { toggleActive } from "./store/features/modalSlice"
+import { useAppDispatch, useAppSelector } from "./store/hooks/hooks"
 
 const App: FC = () => {
-    const [state, setState] = useState(false)
+
+    const { active, title, } = useAppSelector(state => state.modal)
+    const dispatch = useAppDispatch()
+
+    const handleCloseClick = (): void => {
+        dispatch(toggleActive())
+    }
 
     return (
         <Container>
-            <button onClick={() => { setState(prev => !prev) }}>RSDASD</button>
-            <Modal active={state} setActive={setState}>
+            <Modal active={active} title={title} handleCloseClick={handleCloseClick}>
                 <Tracker />
             </Modal>
             <Content />

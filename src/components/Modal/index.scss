@@ -20,6 +20,13 @@
         pointer-events: all;
     }
 
+    &__title {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.6em;
+        text-transform: capitalize;
+    }
+
     &__content {
         position: relative;
         width: max-content;
