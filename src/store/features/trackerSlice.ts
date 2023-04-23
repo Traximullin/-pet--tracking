@@ -3,7 +3,12 @@ import type { PayloadAction } from "@reduxjs/toolkit"
 import { type TrackerStateModel } from "../model/tracker.model"
 
 const initialState: TrackerStateModel = {
-    data: [],
+    work: [],
+    play: [],
+    styde: [],
+    exercise: [],
+    social: [],
+    "self-care": [],
 }
 
 export const trackerSlice = createSlice({
@@ -11,7 +16,7 @@ export const trackerSlice = createSlice({
     initialState,
     reducers: {
         test: (state, action: PayloadAction<string>) => {
-            state.data = []
+            state.work = []
         },
     },
 })

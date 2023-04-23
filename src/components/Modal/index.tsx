@@ -4,16 +4,12 @@ import { type IModal } from "./interface"
 import { closeSvg } from "../../assets/svg"
 
 const Modal: FC<IModal> = (props) => {
-    const { children, active, setActive, ...otherProps } = props
+    const { children, title, active, handleCloseClick, ...otherProps } = props
 
     const currentClasses = ["modal"]
 
     if (active) {
         currentClasses.push("modal_active")
-    }
-
-    const handleCloseClick = (): void => {
-        setActive(false)
     }
 
     return (
@@ -27,6 +23,7 @@ const Modal: FC<IModal> = (props) => {
                 className="modal__content"
                 onClick={(e) => { e.stopPropagation() }} //! закрытие не работало на саму модалку
             >
+                <p className="modal__title">{title}</p>
                 <span
                     className="modal__close"
                     onClick={handleCloseClick}

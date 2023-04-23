@@ -1,6 +1,7 @@
-import { type Dispatch, type HTMLAttributes, type SetStateAction } from "react"
+import { type HTMLAttributes } from "react"
 
 export interface IModal extends HTMLAttributes<HTMLDivElement> {
     active: boolean
-    setActive: Dispatch<SetStateAction<boolean>>
+    title?: string
+    handleCloseClick: () => void
 }

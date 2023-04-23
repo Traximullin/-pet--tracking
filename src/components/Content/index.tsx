@@ -1,18 +1,31 @@
 import { type FC } from "react"
 import "./index.scss"
-import Card from "../Card"
-import Panel from "../Panel"
+import { Card, Panel } from ".."
+import { useAppDispatch, useAppSelector } from "../../store/hooks/hooks"
+import { type TCardHeaderType } from "../CardHeader/interface"
+import { toggleActive } from "../../store/features/modalSlice"
 
 const Content: FC = () => {
+
+    const trackers = useAppSelector(state => state.tracker)
+    const dispatch = useAppDispatch()
+
+    const handleOpenModal = (type: TCardHeaderType): void => {
+        dispatch(toggleActive(type))
+    }
+
     return (
         <div className="content">
             <Panel />
-            <Card type="work" />
-            <Card type="play" />
-            <Card type="styde" />
-            <Card type="exercise" />
-            <Card type="social" />
-            <Card type="self-care" />
+            {
+                Object.keys(trackers).map((tracker, index) => (
+                    <Card
+                        onClick={() => { handleOpenModal(tracker as TCardHeaderType) }}
+                        key={`content-tracker-item-${index}`}
+                        type={tracker as TCardHeaderType}
+                    />
+                ))
+            }
         </div>
     )
 }
