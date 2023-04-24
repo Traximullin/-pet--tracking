@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 import type { PayloadAction } from "@reduxjs/toolkit"
-import { type TrackerStateModel } from "../model/tracker.model"
+import { type ActionFixTime, type TrackerStateModel } from "../model/tracker.model"
 
 const initialState: TrackerStateModel = {
     work: [],
@@ -15,12 +15,18 @@ export const trackerSlice = createSlice({
     name: "tracker",
     initialState,
     reducers: {
-        test: (state, action: PayloadAction<string>) => {
-            state.work = []
+        fixTime: (state, action: PayloadAction<ActionFixTime>) => {
+            state[action.payload.type] = [
+                ...state[action.payload.type],
+                {
+                    date: new Date().getTime(),
+                    hours: action.payload.hours,
+                }
+            ]
         },
     },
 })
 
-export const { test, } = trackerSlice.actions
+export const { fixTime, } = trackerSlice.actions
 
 export default trackerSlice.reducer
