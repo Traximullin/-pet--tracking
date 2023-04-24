@@ -28,7 +28,7 @@ const Modal: FC<IModal> = (props) => {
                     className="modal__close"
                     onClick={handleCloseClick}
                 >
-                    <img src={closeSvg}/>
+                    <img src={closeSvg} alt="close"/>
                 </span>
                 {children}
             </div>

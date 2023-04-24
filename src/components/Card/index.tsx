@@ -4,7 +4,7 @@ import "./index.scss"
 import { type ICard } from "./interface"
 
 const Card: FC<ICard> = (props) => {
-    const { type, ...othersProps } = props
+    const { type, hours = 0, ...othersProps } = props
 
     return (
         <article className="card" {...othersProps}>
@@ -15,7 +15,7 @@ const Card: FC<ICard> = (props) => {
                     <div className="card__dots"/>
                 </div>
                 <div className="card__information">
-                    <p className="card__title">32hrs</p>
+                    <p className="card__title">{hours}hrs</p>
                     <p className="card__sub-title">Last Week - 36hrs</p>
                 </div>
             </div>
